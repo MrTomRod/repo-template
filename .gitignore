@@ -1,0 +1,8 @@
+.pixi/*
+!.pixi/config.toml
+.opencode/
+__pycache__/
+.devcontainer/.env
+.devcontainer/devcontainer-lock.json
+.pixi/*
+!.pixi/config.toml
