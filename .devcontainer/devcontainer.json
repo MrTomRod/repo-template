@@ -5,7 +5,6 @@
   },
   "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "runArgs": ["--env-file", "${localWorkspaceFolder}/.devcontainer/.env"],
   "customizations": {
     "vscode": {
       "extensions": [

@@ -9,8 +9,10 @@ else
   echo "No pixi.toml found in /workspace. Run 'pixi init' when you are ready."
 fi
 
-if [[ -z "${OPENROUTER_API_KEY:-}" ]]; then
-  echo "OPENROUTER_API_KEY is not set. Declare it in .devcontainer/.env"
-fi
+cat <<'EOF'
+Ready!
 
-echo "Ready! Run 'opencode' or 'opencode web' to start AI-assisted programming."
+Start OpenCode with: 'opencode', then connect a model provider with '/connect'.
+
+Alternatively, run 'opencode web' to start the web interface.
+EOF
