@@ -18,8 +18,7 @@
   },
   "mounts": [
     "source=${localWorkspaceFolderBasename}-pixi,target=/workspace/.pixi,type=volume",
-    "source=${localEnv:HOME}/.cache/rattler/cache,target=/root/.cache/rattler/cache,type=bind",
-    "source=${localWorkspaceFolderBasename}-persist,target=/persist-data,type=volume"
+    "source=${localEnv:HOME}/.cache/rattler/cache,target=/root/.cache/rattler/cache,type=bind"
   ],
   "containerUser": "root",
   "remoteUser": "root",

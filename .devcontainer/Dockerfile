@@ -25,7 +25,7 @@ RUN --mount=type=cache,target=/var/cache/apt/archives,sharing=locked \
 RUN cat <<'EOF' >> /root/.bashrc
 
 # Persistent bash history
-HISTFILE=/persist-data/.bash_history
+HISTFILE=/workspace/.opencode/.bash_history
 HISTSIZE=10000
 HISTFILESIZE=20000
 shopt -s histappend
@@ -37,3 +37,9 @@ EOF
 
 # Restore frontend for interactive use
 ENV DEBIAN_FRONTEND="dialog"
+
+# Store OpenCode stuff in the workspace
+ENV XDG_CONFIG_HOME=/workspace/.opencode/opencode-config
+ENV XDG_DATA_HOME=/workspace/.opencode/opencode-data
+ENV XDG_CACHE_HOME=/workspace/.opencode/opencode-cache
+ENV XDG_STATE_HOME=/workspace/.opencode/opencode-state

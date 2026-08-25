@@ -12,7 +12,7 @@ A minimal scaffolding environment combining **Pixi**, **OpenCode**, and **VS Cod
 2. **Connect a model provider:** Run `opencode`, then use `/connect` or run `opencode web` to start the web interface.
 3. **Add dependencies:** Run `pixi init`, then `pixi add ...`.
 
-OpenCode stores provider credentials outside the repository, in a Docker volume mounted at `/persist-data`.
+OpenCode stores all data, config, cache, and state in `.opencode/` (add to `.gitignore` if needed).
 
 ## Usage & Commands
 
@@ -25,6 +25,7 @@ OpenCode stores provider credentials outside the repository, in a Docker volume 
 
 ## Structure
 
-* `.devcontainer/Dockerfile` — Builds image on `ghcr.io/prefix-dev/pixi:latest` with OpenCode CLI.
-* `.devcontainer/devcontainer.json` — Mounts workspace and sets up persistent Pixi volumes.
+* `.devcontainer/Dockerfile` — Builds image on `ghcr.io/prefix-dev/pixi:latest` with OpenCode CLI and XDG path configuration.
+* `.devcontainer/devcontainer.json` — Mounts workspace and sets up Pixi volumes.
 * `.devcontainer/init.sh` — Startup script that hooks Pixi into the bash shell and installs dependencies automatically if `pixi.toml` exists.
+* `.opencode/` — OpenCode configuration, credentials, cache, and session data (generated at runtime).
