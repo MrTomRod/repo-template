@@ -1,7 +1,7 @@
 .pixi/*
 !.pixi/config.toml
-.opencode/
+.xdg/
 __pycache__/
 .devcontainer/devcontainer-lock.json
-.pixi/*
-!.pixi/config.toml
+.vscode/
+.agents/
